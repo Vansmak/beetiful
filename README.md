@@ -76,4 +76,5 @@ python app.py
 - **Config Editor**: Edit the Beets configuration directly from the web interface. The `save` button will update the `config.yaml` file.
 
 
+![Unified Music Management](https://github.com/user-attachments/assets/4bc8887a-aee5-4450-a7f1-799c4eaf8c86)
 
