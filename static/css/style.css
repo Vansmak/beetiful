@@ -1,0 +1,187 @@
+/* Basic dark mode styles */
+body {
+    background-color: #1e1e1e;
+    color: #cfcfcf;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar styles */
+.sidebar-container {
+    background-color: #252525;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid #444;
+}
+
+/* Command Dropdown (increase visibility) */
+select#command {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    font-size: 1rem;
+}
+
+select#command option {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 2;
+    padding: 20px;
+}
+
+/* Table and Pagination */
+.container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.table-container {
+    background-color: #2e2e2e;
+    overflow-y: auto;
+    max-height: 85vh;
+    padding: 20px;
+}
+
+.tighten-table th, .tighten-table td {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    max-width: 150px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.tighten-table th {
+    background-color: #4b2647;
+    color: #ffffff;
+}
+
+.tighten-table td {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+.table-striped tbody tr {
+    height: 2.5rem;
+}
+
+.table-striped tbody tr:hover {
+    background-color: #444;
+}
+
+/* Pagination controls centered */
+#paginationControls {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+/* Smaller Pagination buttons */
+#paginationControls button {
+    margin: 0 3px; /* Less margin */
+    padding: 3px 8px; /* Smaller buttons */
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Edit Form */
+.form-container {
+    background-color: #252525;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    border-left: 1px solid #444;
+}
+
+/* Config YAML Editor - Taller */
+textarea#configTextArea {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    height: 400px; /* Increased height */
+    resize: vertical; /* Allow resizing */
+}
+
+/* Previews and results */
+pre#commandPreview, pre#commandResult {
+    background-color: #2e2e2e;
+    color: #ffffff;
+}
+
+/* Input fields, buttons, and other form elements */
+input, select, textarea, button {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 3px;
+}
+
+button:hover, input:focus, select:focus, textarea:focus {
+    background-color: #444444;
+    border-color: #666666;
+}
+
+input::placeholder {
+    color: #777777;
+}
+
+/* Stat counts */
+.stat-count {
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container-fluid {
+        flex-direction: column;
+    }
+
+    .sidebar-container, .main-content, .form-container {
+        width: 100%;
+        padding: 10px;
+        border: none;
+    }
+
+    .main-content {
+        order: 2;
+    }
+
+    .sidebar-container, .form-container {
+        order: 1;
+    }
+}
+#logo-container {
+    position: absolute;
+    bottom: 50px;
+    right: 110px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px; /* Adjust this for desired width */
+    height: 250px; /* Adjust this for desired height */
+    background-color: #252525; /* Background color to make it stand out like an album cover */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: Adds some depth */
+}
+
+#beetiful-logo {
+    width: 100%; /* Makes the image fill the container */
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+#beetiful-logo:hover {
+    opacity: 1; /* Brightens on hover */
+}
