@@ -1,0 +1,13 @@
+## rename to .env
+
+## Environment Variables
+
+
+# Path to the user's Beets configuration directory
+BEETSDIR=/.config/beets  #path to your beets config.yaml
+
+# Path to your music library
+LIBRARY_PATH=/path/to/yor/music
+
+# Add any other environment-specific settings here
+FLASK_PORT=

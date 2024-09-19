@@ -198,7 +198,9 @@ def parse_stats(output):
             stats['total_size'] = line.split(': ')[1].split(' ')[0]  
     return stats
 
-
+# Read port from environment variable, defaulting to 3000 if not set
+port = int(os.getenv("FLASK_PORT", 3000))
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=3001)
+    app.run(debug=True, host='0.0.0.0', port=port)
+
