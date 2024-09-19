@@ -44,7 +44,7 @@ To install Beetiful, follow these steps:
 
 Create a `.env` file in the project root to configure Beets-specific settings. Here's an example:
 
-    ```bash
+    ```
     # .env file
 
     # Path to the user's Beets configuration directory
