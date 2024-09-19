@@ -1,6 +1,36 @@
+# Environment Variables
 .env
+
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+
+# Log files
 *.log
+
+# Flask specific files
 instance/
+
+# SQLite database files
 *.db
+
+# Virtual environment
+venv/
+env/
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code settings
+.vscode/
+
+# MacOS system files
+.DS_Store
+
+# Backup files
+*.bak
+*~
+

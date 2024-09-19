@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unified Music Management</title>
+    <title>Beetiful</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css">
 </head>
@@ -36,31 +36,44 @@
         </div>
 
         <!-- Main Content (table and form) -->
-        <div class="main-content col-md-6">
-            <!-- Pagination Controls -->
-            <div id="paginationControls" class="d-flex justify-content-between my-3">
-                <button class="btn btn-secondary" id="prevPage">Previous</button>
-                <button class="btn btn-secondary" id="nextPage">Next</button>
-            </div>
+<div class="main-content col-md-6">
+    <!-- Pagination Controls -->
+    <div id="paginationControls" class="d-flex justify-content-between my-3">
+        <button class="btn btn-secondary" id="prevPage">Previous</button>
+        <button class="btn btn-secondary" id="nextPage">Next</button>
+    </div>
 
-            <div class="table-container">
-                <table class="table table-striped tighten-table" id="libraryTable">
-                    <thead>
-                        <tr id="tableHeaders">
-                            <th data-column="0">Title <span id="totalTracks" class="stat-count"></span> <input type="text" id="filterTitle" placeholder="Filter" oninput="applyFilters()"></th>
-                            <th data-column="1">Artist <span id="totalArtists" class="stat-count"></span> <input type="text" id="filterArtist" placeholder="Filter" oninput="applyFilters()"></th>
-                            <th data-column="2">Album <span id="totalAlbums" class="stat-count"></span> <input type="text" id="filterAlbum" placeholder="Filter" oninput="applyFilters()"></th>
-                            <th data-column="3">Genre <input type="text" id="filterGenre" placeholder="Filter" oninput="applyFilters()"></th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody id="libraryResults">
-                        <!-- Populated by JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <div class="table-container">
+        <table class="table table-striped tighten-table" id="libraryTable">
+            <thead>
+                <tr id="tableHeaders">
+                    <th data-column="0">Title <span id="totalTracks" class="stat-count"></span> 
+                        <input type="text" id="filterTitle" placeholder="Filter" oninput="applyFilters()">
+                    </th>
+                    <th data-column="1">Artist <span id="totalArtists" class="stat-count"></span> 
+                        <input type="text" id="filterArtist" placeholder="Filter" oninput="applyFilters()">
+                    </th>
+                    <th data-column="2">Album <span id="totalAlbums" class="stat-count"></span> 
+                        <input type="text" id="filterAlbum" placeholder="Filter" oninput="applyFilters()">
+                    </th>
+                    <th data-column="3">Genre 
+                        <input type="text" id="filterGenre" placeholder="Filter" oninput="applyFilters()">
+                    </th>
+                    <th>
+                        <!-- Clear Filters Button -->
+                        <button class="btn btn-outline-danger btn-sm float-end" id="clearFilters" onclick="clearFilters()">Clear Filters</button>
+                    </th>
+                </tr>
+            </thead>
+            
+            <tbody id="libraryResults">
+                <!-- Populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
 
         <!-- Form Container (right) -->
         <div class="form-container col-md-3">

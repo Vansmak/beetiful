@@ -1,15 +1,15 @@
 window.onload = function() {
-    getStats();              // Fetch and display stats
-    viewConfig();            // Load and display config data
+    getStats();              
+    viewConfig();            
     
-    setupCommandDropdown();  // Setup the command dropdown
+    setupCommandDropdown();  
 };
 
 function getStats() {
     fetch('/api/stats')
         .then(response => response.json())
         .then(data => {
-            // Update stats in the table headers
+            
             document.getElementById('totalTracks').textContent = data.total_tracks !== undefined ? `(${data.total_tracks})` : '';
             document.getElementById('totalArtists').textContent = data.total_artists !== undefined ? `(${data.total_artists})` : '';
             document.getElementById('totalAlbums').textContent = data.total_albums !== undefined ? `(${data.total_albums})` : '';
@@ -19,7 +19,7 @@ function getStats() {
         });
 }
 
-// Function to setup the command dropdown
+
 function setupCommandDropdown() {
     const commandDropdown = document.getElementById('command');
     commandDropdown.innerHTML = `
@@ -94,7 +94,7 @@ function updateCommandOptions() {
                 <label><input type="checkbox" value="-c" onchange="updatePreview()"> Include sensitive data</label><br>
                 <label><input type="checkbox" value="-e" onchange="updatePreview()"> Edit configuration file</label><br>
             `;
-            viewConfig(); // Load config details if the command is 'config'
+            viewConfig(); 
             break;
         default:
             optionsDiv.innerHTML = '<p>Select a command to see options.</p>';
@@ -188,14 +188,14 @@ function formatCommandOutput(output) {
 
 
 
-// static/js/scripts.js
+
 
 
 function viewConfig() {
     fetch('/api/config')
-        .then(response => response.text())  // Fetch as plain text
+        .then(response => response.text())  
         .then(data => {
-            document.getElementById('configTextArea').value = data;  // Populate the textarea with raw YAML
+            document.getElementById('configTextArea').value = data;  
         })
         .catch(error => {
             document.getElementById('configResult').textContent = 'Error loading config: ' + error.message;
@@ -203,12 +203,12 @@ function viewConfig() {
 }
 
 function editConfig() {
-    const yamlText = document.getElementById('configTextArea').value;  // Get raw text from textarea
+    const yamlText = document.getElementById('configTextArea').value;  
 
     fetch('/api/config', {
         method: 'POST',
-        headers: { 'Content-Type': 'text/plain' },  // Send plain text
-        body: yamlText  // Send raw text
+        headers: { 'Content-Type': 'text/plain' },  
+        body: yamlText  
     })
     .then(response => response.json())
     .then(data => {

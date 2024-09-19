@@ -1,53 +1,57 @@
-/* Basic dark mode styles */
+:root {
+    --beet-color: #8a2b6f;
+    --dark-bg: #1e1e1e;
+    --sidebar-bg: #252525;
+    --table-bg: #353535; 
+    --input-bg: #333333;
+    --border-color: #555555;
+    --highlight-color: #4b2647;
+    --primary-btn: #007bff;
+}
+
 body {
-    background-color: #1e1e1e;
+    background-color: var(--dark-bg);
     color: #cfcfcf;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Sidebar styles */
-.sidebar-container {
-    background-color: #252525;
+.sidebar-container, .form-container {
+    background-color: var(--sidebar-bg);
     padding: 20px;
     height: 100vh;
     overflow-y: auto;
-    border-right: 1px solid #444;
+    border: 1px solid #444;
 }
 
-/* Command Dropdown (increase visibility) */
-select#command {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #555555;
-    font-size: 1rem;
-}
-
-select#command option {
-    background-color: #333333;
-    color: #ffffff;
-}
-
-/* Main Content Area */
-.main-content {
-    flex-grow: 2;
-    padding: 20px;
-}
-
-/* Table and Pagination */
 .container-fluid {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
 .table-container {
-    background-color: #2e2e2e;
-    overflow-y: auto;
+    background-color: var(--table-bg);
+    overflow: auto;
     max-height: 85vh;
     padding: 20px;
+}
+
+input, select, textarea, button {
+    background-color: var(--input-bg);
+    color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+}
+
+input, select, textarea {
+    box-shadow: 0 0 0 0.2rem var(--beet-color);
+}
+
+button:hover, input:focus, select:focus, textarea:focus {
+    background-color: #444;
+    border-color: #666;
 }
 
 .tighten-table th, .tighten-table td {
@@ -61,86 +65,91 @@ select#command option {
 }
 
 .tighten-table th {
-    background-color: #4b2647;
+    background-color: var(--highlight-color);
     color: #ffffff;
 }
 
 .tighten-table td {
-    background-color: #2e2e2e;
+    background-color: var(--table-bg); 
     color: #ffffff;
-}
-
-.table-striped tbody tr {
-    height: 2.5rem;
 }
 
 .table-striped tbody tr:hover {
     background-color: #444;
 }
 
-/* Pagination controls centered */
 #paginationControls {
     display: flex;
     justify-content: center;
-    margin-bottom: 5px; /* Reduced margin */
+    margin-bottom: 5px;
 }
 
-/* Smaller Pagination buttons */
 #paginationControls button {
-    margin: 0 3px; /* Less margin */
-    padding: 3px 8px; /* Smaller buttons */
-    font-size: 0.9rem; /* Smaller font size */
+    margin: 0 3px;
+    padding: 3px 8px;
+    font-size: 0.9rem;
 }
 
-/* Edit Form */
-.form-container {
+#clearFilters {
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: var(--primary-btn);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#clearFilters:hover {
+    background-color: #0056b3; 
+}
+
+#logo-container {
+    position: absolute;
+    bottom: 50px;
+    right: 120px; 
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px; 
+    height: 250px; 
     background-color: #252525;
-    padding: 20px;
-    height: 100vh;
-    overflow-y: auto;
-    border-left: 1px solid #444;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Config YAML Editor - Taller */
-textarea#configTextArea {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #555555;
-    height: 400px; /* Increased height */
-    resize: vertical; /* Allow resizing */
+#beetiful-logo {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-/* Previews and results */
-pre#commandPreview, pre#commandResult {
-    background-color: #2e2e2e;
-    color: #ffffff;
+#beetiful-logo:hover {
+    opacity: 1;
 }
 
-/* Input fields, buttons, and other form elements */
-input, select, textarea, button {
-    background-color: #333333;
-    color: #ffffff;
-    border: 1px solid #555555;
-    border-radius: 3px;
+th input[type="text"] {
+    width: 100%;
+    display: block;
+    margin-top: 5px;
 }
 
-button:hover, input:focus, select:focus, textarea:focus {
-    background-color: #444444;
-    border-color: #666666;
+input[type="text"]:not(:placeholder-shown) {
+    border: 2px solid var(--highlight-color);
 }
 
-input::placeholder {
-    color: #777777;
+.active-page {
+    background-color: var(--primary-btn);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: default;
+    pointer-events: none;
+    font-weight: bold;
 }
 
-/* Stat counts */
-.stat-count {
-    font-weight: normal;
-    font-size: 0.8em;
-    color: #ffffff;
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .container-fluid {
         flex-direction: column;
@@ -151,37 +160,87 @@ input::placeholder {
         padding: 10px;
         border: none;
     }
-
-    .main-content {
-        order: 2;
-    }
-
-    .sidebar-container, .form-container {
-        order: 1;
-    }
 }
-#logo-container {
+
+#commandBuilder input,
+#commandBuilder select,
+#commandBuilder button,
+#commandBuilder textarea {
+    background-color: #333333;
+    color: #ffffff;
+    border: none; 
+    box-shadow: inset 0 0 0 0.2rem rgba(138, 43, 111, 1); 
+    border-radius: 3px; 
+    padding: 5px;
+    margin: 5px 0;
+}
+
+
+#commandBuilder input:hover,
+#commandBuilder select:hover,
+#commandBuilder button:hover,
+#commandBuilder textarea:hover,
+#commandBuilder input:focus,
+#commandBuilder select:focus,
+#commandBuilder textarea:focus {
+    background-color: #444444; 
+    outline: none; 
+}
+
+
+#importOptions {
+    padding: 10px;
+    background-color: #2e2e2e; 
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+
+#beetImportButton {
+    background-color: #4b2647; 
+    color: #ffffff;
+    border: none; 
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#beetImportButton:hover {
+    background-color: #f805e8; 
+}
+
+
+#commandBuilder input::placeholder {
+    color: #777777;
+}
+
+th {
+    cursor: pointer; 
+    position: relative; 
+    padding-right: 20px; 
+}
+
+
+th.sortable::after {
+    content: ''; 
+}
+
+
+.sort-arrow {
     position: absolute;
-    bottom: 50px;
-    right: 110px;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 250px; /* Adjust this for desired width */
-    height: 250px; /* Adjust this for desired height */
-    background-color: #252525; /* Background color to make it stand out like an album cover */
-    border-radius: 10px; /* Optional: Adds rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: Adds some depth */
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    color: #cfcfcf; 
 }
 
-#beetiful-logo {
-    width: 100%; /* Makes the image fill the container */
-    height: auto;
-    opacity: 0.9;
-    transition: opacity 0.3s ease;
+
+th.asc .sort-arrow {
+    content: '▲'; 
 }
 
-#beetiful-logo:hover {
-    opacity: 1; /* Brightens on hover */
+th.desc .sort-arrow {
+    content: '▼'; 
 }
+
