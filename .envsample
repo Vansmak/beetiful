@@ -10,4 +10,4 @@ BEETSDIR=/.config/beets  #path to your beets config.yaml
 LIBRARY_PATH=/path/to/yor/music
 
 # Add any other environment-specific settings here
-PORT=
+FLASK_PORT=
