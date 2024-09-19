@@ -48,7 +48,7 @@ To start the application, you can run the following command from the project roo
 ```bash
 python app.py
 
-
+```
     Open your browser and navigate to `http://127.0.0.1:3001`.
 
 ## Usage
