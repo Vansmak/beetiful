@@ -9,10 +9,13 @@ Beetiful is a simple yet elegant web-based interface for managing your music lib
 - Command Builder for running Beets commands
 - Config Editor to edit the `beets` configuration file directly from the interface
 - Music Library Viewer with filtering, sorting, and pagination
-- Fully responsive dark mode layout
 - Simple integration with beets' advanced music management features
-- Powered by Flask, JavaScript, and Bootstrap
 
+## Future additions
+- Docker
+- Plugin manager
+- More commands
+- Mobile friendly layout
 ## Installation
 
 To install Beetiful, follow these steps:
