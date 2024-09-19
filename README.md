@@ -40,8 +40,23 @@ To install Beetiful, follow these steps:
     ```bash
     pip install -r requirements.txt
     ```
+4. ## Environment Variables
 
-4. **Running the Application
+Create a `.env` file in the project root to configure Beets-specific settings. Here's an example:
+
+    ```bash
+    # .env file
+
+    # Path to the user's Beets configuration directory
+    BEETSDIR=/.config/beets
+
+    # Path to your music library
+    LIBRARY_PATH=/music
+
+    # Add any other environment-specific settings here
+    PORT=
+    ```
+5. **Running the Application
 
 To start the application, you can run the following command from the project root:
 
@@ -57,18 +72,5 @@ python app.py
 - **Library Management**: View your library with sorting and filtering options. Use the pagination buttons to navigate large libraries.
 - **Config Editor**: Edit the Beets configuration directly from the web interface. The `save` button will update the `config.yaml` file.
 
-## Environment Variables
 
-Create a `.env` file in the project root to configure Beets-specific settings. Here's an example:
-
-```bash
-# .env file
-
-# Path to the user's Beets configuration directory
-BEETSDIR=/.config/beets
-
-# Path to your music library
-LIBRARY_PATH=/music
-
-# Add any other environment-specific settings here
 
