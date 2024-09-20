@@ -7,7 +7,7 @@ Beetiful is a simple yet elegant web-based interface for managing your music lib
 
 If you find this project helpful, please consider supporting it. Your contributions help maintain and improve the project. Any support is greatly appreciated! ❤️
 
-- [Donate via PayPal](https://py.pl/1Fo1e
+[![Buy Me A Coffee](https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=your_Vansmak&button_colour=FFDD00&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/your_username)
   
 Thank you for your support!
 
