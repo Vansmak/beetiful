@@ -3,6 +3,13 @@
 <img src="https://github.com/user-attachments/assets/7a8eabb9-bfc4-4f40-a07c-382d382e64f7" width="200" height="200">
 
 Beetiful is a simple yet elegant web-based interface for managing your music library using [beets](https://beets.io/). It allows you to manage and interact with your music library through an intuitive GUI, while leveraging the power of beets on the backend.
+## Support This Project
+
+If you find this project helpful, please consider supporting it. Your contributions help maintain and improve the project. Any support is greatly appreciated! ❤️
+
+- [Donate via PayPal](https://py.pl/1Fo1e
+  
+Thank you for your support!
 
 ## Features
 
